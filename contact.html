@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact Page</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<!-- Header link for original CSS file <link rel="stylesheet" type="text/css" href="css/styles.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/style.production.css">
+</head>
+
+<body>
+  <div>
+<!-- Top Bar above the Navigation-->
+    <div class="top-bar">
+      <p>A L E X I A ' S&nbsp;&nbsp;&nbsp;P O R T F O L I O</p>
+    </div>
+
+<!-- Add your logo here (I will not have a logo image to the portfolio page so for now the code will be hidden)
+    <img src="https://placeholder.co/200x70" alt="logo"> 
+-->
+
+<!-- Navigation Bar-->
+    <div class="center-container">
+      <nav class="centered nav">
+        <ul role="menubar" class="navigation-list">
+          <li role="presentation">
+            <a href="index.html" role="menuitem" class="navigation-list__item navigation-list__item--active">H O M E</a>
+          </li>
+          <li role="presentation">
+            <a href="about.html" role="menuitem" class="navigation-list__item">A B O U T</a>
+          </li>
+          <li role="presentation">
+            <a href="contact.html" role="menuitem" class="navigation-list__item">C O N T A C T</a>
+          </li>
+          <li role="presentation">
+            <a href="work.html" role="menuitem" class="navigation-list__item navigation-list__item--active">W O R K</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+<!-- Contact Page Contact Form -->
+    <div class="contact-container">
+      <h1 role="header-for-contact-me-form-paragraph" class="h1-contact-container">I N Q U I R E</h1>
+      <p class="contact-me-form-paragraph">Interested in working together? I can't wait to hear from you. Use the form below or email me directly via akcareerfoundry@gmail.com. I will be in touch! Please allow 5 to 7 business days to respond to any inquires— add akcareerfoundry@gmail.com to your address book to ensure a reply.</p>
+      <form action="" method="post" id="contact-form" class="contact-form">
+<!-- Revise the form so that the "first name" and "last name" inputs are sharing space on the form line (inline-block?) as well as the "email" and "industry" inputs
+-->
+        <label class="standard-label" for="contact-first-name"> </label>
+        <input type="name" id="contact-first-name" placeholder="First name*" required>
+
+        <label class="standard-label" for="contact-last-name"></label>
+        <input type="name" id="contact-last-name" placeholder="Last name*" required>
+
+        <label class="standard-label" for="contact-email"> </label>
+        <input type="email" id="contact-email" placeholder="Your email*" required>
+
+        <label class="standard label" for="contact-industry"></label>
+        <input type="industry" id="contact-industry-name" placeholder="Industry">
+      
+        <label class="standard label" for="contact-subject"></label>
+        <input type="subject" id="contact-subject" placeholder="Subject">
+      
+        <label class="standard-label" for=“contact-message”> </label>
+        <textarea placeholder="Message" required maxlength="240"></textarea>
+        <input type="submit" id=“contact-message” value="SUBMIT FORM">
+      </form>
+    </div>
+
+<!-- Contact Page Body Paragraph -->
+<!-- Place "placeholder-2", "placeholder-3", "placeholder-4", "placeholder-5", "placeholder-5" images  in Contact Page body paragraph below 
+-->
+    <div class="contactpage-body-container">
+      <img src="https://placehold.co/150x150" alt="placeholder-1">&nbsp;&nbsp;
+      <img src="https://placehold.co/150x150" alt="placeholder-2">&nbsp;&nbsp;
+      <img src="https://placehold.co/150x150" alt="placeholder-3">&nbsp;&nbsp;
+      <img src="https://placehold.co/150x150" alt="placeholder-4">&nbsp;&nbsp;
+      <img src="https://placehold.co/150x150" alt="placeholder-5">&nbsp;&nbsp;
+    </div>
+
+<!-- Contact Page Footer with SVG icons for GitHub, Twitter and LinkedIn -->
+  <footer>
+    <div class="find-me-on-contactpage-center-container">
+      <p>FIND ME ON</p>
+        <!-- Github icon -->
+        <img src="img/github-142-svgrepo-com.svg" alt="GitHub" width="30px" height="30px">
+        <!-- Instagram icon -->
+        <img src="img/instagram-svgrepo-com.svg" alt="Instagram" width="30px" height="30px">
+        <!-- LinkedIn icon -->
+        <img src="img/linkedin-linked-in-svgrepo-com.svg" alt="LinkedIn" width="30px" height="30px">
+        <!-- Logo -->
+        <img src="img/portfolio_logo.png" alt="logo" width="50px" height="50px"> 
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+
+</html>
+
+
+<!-- Code for navigation sidebar: (needs some more work)
+        <ul class="sidebar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+-->
+
+
+<!-- If it needs to be added, the code to add a layout image at the top of the Contact Page:
+    <div class="center-container-two">
+      <img src="img/top-layout-image.jpg" class="contact_page_image" alt="Contact Page Image">
+    </div>
+-->
+
+
+<!-- If it needs to be added, the code for the contact for telephone number:
+      <label class="standard-label" for=“contact-telephone”> </label>
+      <input type="tel" id=“contact-telephone” placeholder="Telephone number" pattern="\d{3}[\-]\d{3}[\-]\d{4}"> 
+-->

@@ -1,0 +1,747 @@
+/* I HAVE NOT FINALIZED ORGANIZING THE STYLES.CSS FILE WITH COMMENTS TO INDICATE IN ORDER WHICH CODE BELONGS TO "INDEX.HTML", "ABOUT.HTML" AND "CONTACT.HTML" */
+
+/* 1.8 Exercise addition beginning */
+
+a {
+  color: #357b70;
+} 
+
+/* 1.8 Exercise addition ending */
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    /* Sets the font size to 16px */
+    line-height: 1.6;
+    /* Sets the line-height to 1.6 */
+    margin: 0;
+    padding: 0;
+    }
+
+h1 {
+    font-size: 30px;
+    font-weight: 700;
+   }
+  
+h2 {
+    font-size: 24px;
+    font-weight: 700;
+   }
+  
+h3 {
+    font-size: 18px;
+    font-weight: 700;
+   }
+
+
+
+
+/* Styles.css for Link */
+a {
+    color: #357b70;
+  }
+  
+a:hover {
+    /* No underlining when hovering over a link */
+    text-decoration: none;
+  }
+ 
+a:visited {
+    /* visited link */
+    color: #05676e;
+  }
+  
+a:active {
+    /* selected link */
+    color: #489c79;
+  }
+  
+a:hover, a:focus {
+    /* No underlining when hovering over a link */
+    text-decoration: none;
+  }
+
+
+  
+/* Styles.css for Button */  
+button {
+    /* overwrites browser defaults and resets the border */
+    border: none;
+    /* takes the font from the outer container */
+    font-family: inherit;
+    /* styles the background color, font color, and text decoration (underline, etc.) of the button */
+    background-color: #357b70;
+    color: white;
+    text-decoration: none;
+    /*adds spacing to the button (this will be discussed more in-depth later) */
+    padding: 10px;
+    border-radius: 3px;
+    /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  }
+
+/* Exercise 1.7 button addition for about page beginning*/
+
+  .button, button {
+    /* overwrites browser defaults and resets the border */
+    border: none;
+    display: inline-block;
+    /* takes the font from the outer container */
+    font-family: inherit;
+    /* styles the button */
+    background-color: #357b70;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 3px;
+    /* width of the border, type, color */
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    transition-duration: 0.2s;
+    transition-property: opacity 0.2s;
+  }
+  
+  button:hover,
+  button:focus,
+  .button:hover,
+  .button:focus {
+    /* lets the mouse appear as a hand when hovering over the button */
+    cursor: pointer;
+    /* reduces the opacity of the button to 80% */
+    opacity: 0.8;
+
+  }
+
+
+/*Exercise 1.7 button addition end*/ 
+
+
+/*Exercise 1.7 @keyframe animation beginning*/
+
+
+@keyframes color-change {
+  from {
+    fill: #edc655;
+  }
+  to {
+    fill: #f76414;
+  }
+}
+
+@keyframes color-change {
+  0% {
+    fill: #edc655;
+  }
+  50% {
+    fill: #fcffad;
+  }
+  100% {
+    fill: #f76414;
+  }
+}
+
+.sun {
+  animation-duration: 4s;
+  animation-name: color-change;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+.sun {
+  animation: 4s color-change infinite alternate linear;
+}
+
+@keyframes cloud-move {
+  from {
+    transform: translate(0, 50px);
+  }
+  to {
+    transform: translate(200px, 50px);
+  }
+}
+
+/*The short way example of how to apply the animation to an element before it runs:
+.cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
+}
+*/
+.cloud-front {
+  animation-duration: 30s;
+  animation-name: cloud-move;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes cloud-move-reverse {
+  from {
+    transform: translate(446px, 48px);
+  }
+  to {
+    transform: translate(100px, 48px);
+  }
+}
+
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+/*Exercise 1.7 @keyframe animation ending*/
+
+
+button:hover, button:focus {
+    /* lets the mouse appear as a hand when hovering over the button */
+    cursor: pointer;
+    /* reduces the opacity of the button to 80% */
+    opacity: 0.8;
+  }
+
+.button__secondary {
+    background-color: #e0b354;
+    color: #2b2b2b;
+  }
+ 
+
+
+/* Styles.css for Top Bar */
+.top-bar {
+  background-color: #a3b8bc; /* Breeze: #a3b8bc, Glass: #9ca9aa Sky: #9eaaac */
+  /* The initial color for the top bar is Breeze. "background-color: #a3b8bc;" */
+  color: #fff; /* White text color */
+  padding: 15px;
+  text-align: center;
+  width: 100%;
+  }
+
+
+
+/* Styles.css for Navigation Bar */ 
+.navigation-list__item--active {
+  text-decoration: none;
+  }
+
+nav {
+    background-color: #f8f8f8;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+.navigation-list {
+  list-style: none;
+  display: flex;
+  }
+
+.navigation-list li {
+  margin-right: 20px;
+  display: inline-block;
+  }
+
+.navigation-list li a {
+  text-decoration: none;
+  color: #333;
+  }
+
+.navigation-list li a:hover {
+  color: #ff8b3d;
+  }
+
+.centered-nav {
+  background-color: #f8f8f8;
+  padding: 20px;
+  /*display: flex;
+  justify-content: space-between;
+  align-items: center;*/
+  text-align: center;
+  width: 100%;
+  }
+
+
+  
+/* Styles.css code for Navigation Sidebar: (work in progress)
+.sidebar {
+position: fixed;
+top: 0;
+left: 0;
+height: 100vh;
+width: 125px;
+z-index: 999;
+background-color: #f8f8f8;
+box-shadow: -10px 0 10px rbg(0, 0, 0, 0.1);
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: flex-start; 
+  }
+
+.sidebar li {
+  width: 100%
+  }
+*/
+
+
+
+
+
+
+
+
+
+
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8;
+  padding: 10px;
+  }
+
+/* Initial .centered-container code
+ .center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+  }
+*/ 
+
+
+
+
+
+
+
+/* Styles.css for Home Page */
+.homepage-information {
+  padding: 50px;
+  display: block;
+  justify-content: space-between;
+}
+
+.square-button {
+  width: 100px; /* Adjust the width as needed */
+  height: 100px; /* Make the height the same as the width for a square button */
+  background-color: #bc9e82; /* Nude Brown Color */
+  color: #fff; /* White text */
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px; /* Optional: Add border-radius for rounded corners */
+}
+
+.find-me-on-center-container {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  width: 100%;
+}
+
+.profile_portrait {
+  float: right;
+  height: auto;
+  max-width: 35%;
+  z-index: 0; /* set lower z-index value */
+  position: relative; /* position must be set for z-index to work */
+}
+
+hr.solid {
+  border-top: 15px solid #fff;
+  border-bottom: 15px solid #fff;
+  border-right: 15px solid #fff;
+  border-left: 15px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  width: 100%;
+}
+
+.projects-button-send-to-aboutpage {
+  max-width: auto;
+  margin: 0;
+  padding: 50px;
+  background-color: #bc9e82;
+  width: 100%;
+  clear: both;
+  z-index: 0;
+  position: relative;
+}
+
+.homepage-footer {
+  clear: both;
+}
+
+.hompage-paragraph-container {
+  background-color: #fff;
+  color: #333;
+  width: 50%;
+  padding-left: 150px;
+  z-index: 1; /* set higher z-index value */
+  position: relative; /* position must be set for z-index to work */
+  top: 100px;
+  left: 0px;
+  opacity: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  text-align: left;
+}
+
+.center-container-two {
+ background-color: #fff;
+ color: #fff;
+ width: 100%;
+ text-align: center;
+ padding: 20px;
+}
+
+
+
+
+/* Contact Page styles.css */
+.contact-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  width: 40%;
+  clear: both;
+}
+
+.h1-contact-container {
+text-align: center;
+}
+
+.contact-form {
+    display: grid;
+    gap: 20px;
+}
+
+.border-line {
+    border: none;
+    border-bottom: 1px solid #2f1f1b; /* Add a bottom border */
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+  input, textarea {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #fff;
+  box-shadow: none;
+  border-radius: 0px;
+  border: 0;
+  border-bottom: 1px solid #333;
+}
+
+::placeholder {
+  color: #333;
+}
+
+.contact-me-form-paragraph {
+  color: #333;
+  text-align: center;
+}
+
+.contact-container, .h1 {
+  color: #333;
+}
+
+  input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    border: 0;
+    box-shadow: none;
+    border-radius: 0px;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #555555; 
+  }
+
+.contactpage-body-container {
+    background-color: #333;
+    color: #fbfbfb;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    width: 100%;
+  }
+
+.h1-contact-me-page-body-paragraph {
+    text-align: center;
+  }
+
+.find-me-on-contactpage-center-container {
+    background-color: #333;
+    color: #fbfbfb;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+  }
+
+
+
+/* Styles.css for About Page */  
+.aboutpage-paragraph-container {
+    max-width: auto;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    width: 100%;
+    clear: both;
+    z-index: 0;
+    position: relative;
+  }
+
+.web-developer-paragraph-container {
+    max-width: auto;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    width: 100%;
+    clear: both;
+    z-index: 0;
+    position: relative;
+  }
+
+.climbing-paragraph-container {
+    max-width: auto;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    width: 100%;
+    clear: both;
+    z-index: 0;
+    position: relative;
+  }
+
+.experience-paragraph-container {
+    max-width: auto;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    width: 100%;
+    clear: both;
+    z-index: 0;
+    position: relative;
+  }
+
+.find-me-on-aboutpage-center-container {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+    z-index: 1;
+    position: relative;
+  }
+
+hr.solid.aboutpage-hr {
+    background-color: #fff;
+    color: #fff;
+    border-top: 15px solid #fff;
+    border-bottom: 15px solid #fff;
+    border-right: 15px solid #fff;
+    border-left: 15px solid #fff;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+    clear: both;
+    z-index: 1;
+    position: relative;
+  }
+
+.aboutpage-footer {
+    clear: both;
+  }
+
+
+
+/* Style.css for Work Page */
+
+.work-page-section1 {
+  background-color: #fff;
+}
+
+.grid {
+    display: grid;
+    padding: 20px;
+    text-align: center;
+}
+
+.grid__item {
+    background-color: #fff;
+    color: #333;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 300px 300px;
+}
+
+/* Use grid-gap instead of margin:
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+*/
+
+
+.grid__item:last-child {
+  grid-column-start: 3;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+
+/* Can be written as:
+.grid__item:last-child {
+  grid-column: 3 / 3;
+  grid-row: 1 / 3;
+}
+*/
+
+/* start grid fallback */
+.grid__item {
+  display: inline-block;
+  width: 33%;
+ }
+ /* end grid fallback */
+ 
+
+ @supports (display: grid) {
+  .grid {
+    display: grid;
+    /* grid-template-columns: 300px 300px 300px; fractions are better than pixels - they are responsive */
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    margin: 0;
+ 
+  }
+  .grid__item {
+    background-color: #fff;
+    width: auto;
+    min-height: auto;
+    margin: 0;
+  }
+  .grid__item:last-child {
+    grid-column: 3 / 3;
+    grid-row: 1 / 3;
+  }
+ }
+
+
+.workpage-body-container {
+  background-color: #333;
+  color: #fbfbfb;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  width: 100%;
+}
+
+.find-me-on-workpage-center-container {
+  background-color: #333;
+  color: #fbfbfb;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  width: 100%;
+}
+
+
+
+@media all and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
+@media all and (min-width: 500px) and (max-width: 750px){
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
+
+@media all and (max-width: 750px){
+  /* (shared code) this overarching media query will house all of the shared properties between your two original media queries */
+}
+
+
+@media all and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media all and (min-width: 500px) and (max-width: 750px){
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media all and (max-width: 750px) {
+  .grid {
+    grid-gap: 10px;
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
+
+
+/* If it needs to be added, code for layout image at the top of contact page that has been removed:
+img .contact_page_image {
+  height: 50px;
+  object-fit: fill;
+}
+*/  
